@@ -16,6 +16,9 @@ export const GlobalStyle = props => (
     styles={css`
       body {
         margin: 0;
+        background-color: grey;
+        font-family: 'Press Start 2P';
+        color: white;
       }
       html {
         font-family: sans-serif;
