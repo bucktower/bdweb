@@ -6,6 +6,7 @@ import styled from '@emotion/styled'
 import ContextProvider from '~/provider/ContextProvider'
 
 import { GlobalStyle } from '~/utils/styles'
+import { Space1, Space2, Space3 } from '~/utils/space';
 import Navigation from '~/components/Navigation'
 
 const Wrapper = styled.div`
@@ -18,6 +19,9 @@ const Layout = ({ children }) => {
   return (
     <ContextProvider>
       <GlobalStyle />
+      <Space1 />
+      <Space2 />
+      <Space3 />
       <StaticQuery
         query={graphql`
           query SiteTitleQuery {

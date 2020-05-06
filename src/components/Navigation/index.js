@@ -6,9 +6,11 @@ import StoreContext from '~/context/StoreContext'
 import {
 	CartCounter, 
 	Container,
-	MenuLink,
+	HomeLink,
+	CartLink,
 	Wrapper
 } from './styles'
+import logoSVG from '../../images/logo.svg';
 
 const useQuantity = () => {
 	const { store: {checkout} } = useContext(StoreContext)
@@ -23,17 +25,17 @@ const Navigation = ({ siteTitle }) => {
 	return(
 		<Wrapper>
 			<Container>
-				<MenuLink to='/'>
-					{siteTitle}
-				</MenuLink>
-				<MenuLink to='/cart'>
+				<HomeLink to='/'>
+					<img src={logoSVG} />
+				</HomeLink>
+				<CartLink to='/cart'>
 					{hasItems &&
 						<CartCounter>
 							{quantity}
 						</CartCounter>
 					}
 					Cart 🛍
-				</MenuLink>
+				</CartLink>
 			</Container>
 		</Wrapper>
 	)

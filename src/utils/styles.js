@@ -14,11 +14,20 @@ export const GlobalStyle = props => (
   <Global
     {...props}
     styles={css`
+      @keyframes animStar {
+        from {
+          transform: translateY(0px);
+        }
+        to {
+          transform: translateY(-2000px);
+        }
+      }
       body {
         margin: 0;
-        background-color: grey;
+        background-color: black;
         font-family: 'Press Start 2P';
         color: white;
+        line-height: 150%;
       }
       html {
         font-family: sans-serif;
